@@ -1,0 +1,19 @@
+.link {
+	margin: 0;
+	padding: 0;
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	text-align: left;
+	color: $color-black;
+	background: none;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	text-decoration: none;
+
+	&_blue {
+		color: $color-blue;
+	}
+}

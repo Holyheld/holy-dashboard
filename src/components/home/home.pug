@@ -1,0 +1,12 @@
+mixin home({ data })
+	.home.js-home
+		+intro(data.body.intro)
+		//- +emoji-items(data.body.numbers)
+		#migration
+		#wallet-info
+		+options(data.body.options)
+		+modal-migrate-tokens({
+			title: data.body.modalMigrateTokens.title,
+			description: data.body.modalMigrateTokens.tokenName,
+			buttons: data.body.modalMigrateTokens.buttons
+		})

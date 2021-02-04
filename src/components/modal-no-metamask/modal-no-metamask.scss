@@ -1,0 +1,9 @@
+.modal-no-metamask {
+	&__description {
+		color: $color-gray;
+	}
+
+	.modal__footer-button {
+		width: 100%;
+	}
+}

@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+	head
+		block head
+
+		style(type='text/css').
+			body { background: #fbfbfc; color: #333; }
+			.link { color: #333; }
+			.link_blue { color: #1F3FF2; }
+			.button { background: #f1f1f1; }
+			.button_dark { background: #333; }
+			.icon-button  { background: #f1f1f1; color: #333 }
+			.back-link  { background: #fff; color: #333 }
+	body
+		include ../components/index
+		each sprite in htmlWebpackPlugin.files.sprites
+			!='\n'
+			!=sprite
+		.layout
+			.container
+				block content

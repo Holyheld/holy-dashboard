@@ -1,0 +1,114 @@
+mixin header({ logo, contentLinks, infoLinks, contacts, info, socials, vote }, isMain)
+	header.header.js-header
+		.container.header__container
+			.header__inner
+				a.header__logo-link(href="https://holyheld.com/" title="Holyheld" target="_blank" rel="noreferrer noopener")
+					picture.header__logo-picture
+						source(
+							type='image/webp'
+							srcset=logo.webp['2x']
+						)
+						img.header__logo-image(
+							src=logo.default['2x']
+							srcset=logo.default['2x']
+							alt=""
+						)
+					+icon({
+						className: 'header__logo-icon',
+						id: 'icon-logo',
+					})
+				+icon-button({
+					className: 'header__open-button js-header-open-button',
+					icon: 'icon-dots',
+					title: 'Open menu'
+				})
+				+button({
+					className: 'header__connect-link header__connect-link_desktop js-connect-wallet',
+					text: 'Connect wallet',
+					size: 'sm',
+					mod: 'transparent'
+				})
+				+button({
+					className: 'header__vote-link header__vote-link_desktop',
+					text: vote.text,
+					href: vote.href,
+					size: 'sm',
+					mod: 'blue',
+					target: vote.target,
+					rel: vote.rel
+				})
+				.header__window.js-header-window
+					.container.header__button-container
+						.header__button-wrapper
+							+button({
+								className: 'header__close-button js-header-close-button',
+								mod: 'dark',
+								size: 'sm',
+								icon: 'icon-cross',
+								text: 'close',
+								title: 'Close menu'
+							})
+							+button({
+								className: 'header__connect-link header__connect-link_desktop js-connect-wallet',
+								text: 'Connect wallet',
+								size: 'sm',
+								mod: 'transparent'
+							})
+					.header__content.js-header-content
+						.container.header__content-container
+							.header__columns
+								.header__column
+									.header__column-item
+										+link({
+											className: 'header__connect-link header__connect-link_mobile js-connect-wallet',
+											text: 'Connect wallet',
+										})
+										.header__vote-mobile-wrapper
+											+link({
+												className: 'header__vote-link header__vote-link_mobile',
+												text: vote.text,
+												href: vote.href,
+												target: vote.target,
+												rel: vote.rel
+											})
+										ul.header__list
+											each item in contentLinks
+												li.header__list-item(itemscope=!item.target itemtype=(!!item.target ? false : 'https://schema.org/SiteNavigationElement'))
+													- if (!item.target)
+														meta(itemprop="name" content=item.text)
+													+link({
+														className: 'header__link',
+														text: item.text,
+														href: item.href,
+														target: item.target,
+														rel: item.rel,
+														itemprop: item.target ? false : 'url'
+													})
+								.header__column
+									.header__mini-columns
+										.header__mini-column
+											.header__column-item
+												ul.header__list
+													each item in infoLinks
+														li.header__list-item(itemscope=!item.target itemtype=(!!item.target ? false : 'https://schema.org/SiteNavigationElement'))
+															- if (!item.target)
+																meta(itemprop="name" content=item.text)
+															+link({
+																className: 'header__link',
+																text: item.text,
+																href: item.href,
+																target: item.target,
+																rel: item.rel,
+																mod: 'white',
+																itemprop: item.target ? false : 'url'
+															})
+										.header__mini-column
+											.header__column-item
+												+general-block({ contacts })
+									.header__mini-columns
+										.header__mini-column
+											.header__column-item
+												+general-block({ info })
+										.header__mini-column
+											.header__column-item
+												+general-block({ socials })

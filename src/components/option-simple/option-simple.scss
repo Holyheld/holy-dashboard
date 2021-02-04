@@ -1,0 +1,127 @@
+.option-simple {
+	display: flex;
+	align-items: center;
+	padding: 24px 0;
+
+	@include media-breakpoint-down(sm) {
+		display: block;
+	}
+
+	&__col {
+		padding: 0 16px 0 0;
+
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+		}
+
+		&:nth-child(1) {
+			width: 80px;
+			max-width: 80px;
+
+			@include media-breakpoint-down(md) {
+				width: 72px;
+				max-width: 72px;
+			}
+
+			@include media-breakpoint-down(sm) {
+				width: auto;
+				max-width: none;
+				margin: 0 0 16px;
+			}
+		}
+
+		&:nth-child(2) {
+			width: calc((100% - 180px) * 0.6);
+			max-width: calc((100% - 180px) * 0.6);
+
+			@include media-breakpoint-down(md) {
+				width: calc((100% - 172px) * 0.75);
+				max-width: calc((100% - 172px) * 0.75);
+			}
+
+			@include media-breakpoint-down(sm) {
+				width: auto;
+				max-width: none;
+				margin: 0 0 16px;
+			}
+		}
+
+		&:nth-child(3) {
+			width: calc((100% - 180px) * 0.4);
+			max-width: calc((100% - 180px) * 0.4);
+
+			@include media-breakpoint-down(md) {
+				width: calc((100% - 172px) * 0.25);
+				max-width: calc((100% - 172px) * 0.25);
+			}
+
+			@include media-breakpoint-down(sm) {
+				width: auto;
+				max-width: none;
+				margin: 0 0 24px;
+			}
+
+			.option-simple__name {
+				@include media-breakpoint-down(sm) {
+					margin: 0 0 4px;
+					font-size: $font-size-h3;
+					line-height: $line-height-h3;
+				}
+			}
+		}
+
+		&:nth-child(4) {
+			width: 100px;
+			max-width: 100px;
+			padding: 0;
+			text-align: right;
+
+			@include media-breakpoint-down(sm) {
+				width: auto;
+				max-width: none;
+				text-align: left;
+			}
+		}
+	}
+	
+	&__image {
+		display: block;
+		width: 64px;
+		height: 64px;
+
+		@include media-breakpoint-down(md) {
+			width: 56px;
+			height: 56px;
+		}
+	}
+
+	&__info {
+		margin: 0;
+		padding: 0;
+		font-size: $font-size-h3;
+		line-height: $line-height-h3;
+
+		@include media-breakpoint-down(md) {
+			font-size: $font-size-h3-md;
+			line-height: $line-height-h3-md;
+		}
+	}
+
+	&__name {
+		margin: 0 0 8px;
+		padding: 0;
+		font-weight: $font-weight-bold;
+	}
+
+	&__value {
+		margin: 0;
+		padding: 0;
+		color: $color-gray;
+	}
+
+	&__button {
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+}

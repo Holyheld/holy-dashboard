@@ -1,0 +1,70 @@
+.state {
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 0 0 16px;
+	}
+
+	&__title {
+		margin: 0 24px 0 0;
+
+		@include media-breakpoint-down(sm) {
+			margin: 0 10px 0 0;
+		}
+	}
+
+	&__value {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 32px;
+		padding: 0 16px;
+		font-weight: $font-weight-bold;
+		border-radius: 16px;
+		background: $color-gray-light;
+		color: $color-black;
+
+		&_blue {
+			background: $color-blue;
+			color: $color-white;
+			box-shadow: 0 0 18px 0 $color-blue;
+		} 
+	}
+
+	&__description {
+		margin: 0 0 40px;
+		color: $color-gray;
+
+		@include media-breakpoint-down(sm) {
+			font-size: $font-size-sm;
+			line-height: $line-height-xl;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+
+		@include media-breakpoint-down(sm) {
+			display: block;
+		}
+
+		.button {
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
+	
+			&:not(:last-child) {
+				margin: 0 24px 0 0;
+	
+				@include media-breakpoint-down(sm) {
+					margin: 0 0 24px;
+				}
+			}
+		}
+	}
+}

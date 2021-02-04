@@ -1,0 +1,30 @@
+mixin option-intro({ title, description, detailedDescription, pageName })
+	section.section.option-intro
+		+back-link({
+			className: 'option-intro__back-link js-router-link',
+			title: 'Back',
+			href: '/'
+		})
+		h1.option-intro__title=title
+		p.option-intro__description!=`${detailedDescription || description}`
+		.option-intro__logos
+			picture.option-intro__picture
+				source(
+					type='image/webp'
+					srcset=`/assets/images/${pageName}@2x.webp`
+				)
+				img.option-intro__image(
+					src=`/assets/images/${pageName}@2x.png`
+					srcset=`/assets/images/${pageName}@2x.png`
+					alt=""
+				)
+			picture.option-intro__picture
+				source(
+					type='image/webp'
+					srcset=`/assets/images/logo-circle@2x.webp`
+				)
+				img.option-intro__image(
+					src=`/assets/images/logo-circle@2x.png`
+					srcset=`/assets/images/logo-circle@2x.png`
+					alt=""
+				)

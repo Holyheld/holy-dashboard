@@ -1,0 +1,30 @@
+mixin options({ premium, other, items })
+	section.section.options
+		.options__block
+			h2.options__title=premium.title
+			p.options__description=premium.description
+			ul.options__cards
+				each item, index in items
+					- if (index < 2)
+						li.options__card
+							+option-card({
+								disabled: item.body.disabled,
+								label: item.body.label,
+								title: item.body.title,
+								description: item.body.description,
+								shadow: item.body.shadow,
+								pageName: item.pageName,
+							})
+		.options__block
+			h2.options__title=other.title
+			p.options__description=other.description
+			ul.options__list
+				each item, index in items
+					- if (index > 1)
+						li.options__item
+							+option-simple({
+								disabled: item.body.disabled,
+								title: item.body.title,
+								description: item.body.description,
+								pageName: item.pageName,
+							})

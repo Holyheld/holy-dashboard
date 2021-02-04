@@ -1,0 +1,55 @@
+$font-family-base: 'Inter', Arial, sans-serif !default;
+
+$font-size-lg: 20px !default;
+$font-size-md: 16px !default;
+$font-size-sm: 14px !default;
+$font-size-xs: 12px !default;
+$font-size-xxs: 11px !default;
+$font-size-base: $font-size-md !default;
+
+$font-weight-bold: 700 !default;
+$font-weight-medium: 500 !default;
+$font-weight-regular: 400 !default;
+$font-weight-base: $font-weight-regular !default;
+
+$line-height-xxxl: 1.83 !default;
+$line-height-xxl: 1.71 !default;
+$line-height-xl: 1.57 !default;
+$line-height-lg: 1.5 !default;
+$line-height-md: 1.375 !default;
+$line-height-sm: 1.27 !default;
+$line-height-base: $line-height-md !default;
+
+$font-size-h1: 48px !default;
+$font-size-h2: 24px !default;
+$font-size-h3: 20px !default;
+$font-size-h4: 16px !default;
+$font-size-h5: $font-size-h4 !default;
+$font-size-h6: $font-size-h4 !default;
+
+$font-size-h1-md: 32px !default;
+$font-size-h2-md: 20px !default;
+$font-size-h3-md: 16px !default;
+$font-size-h4-md: $font-size-h3-md !default;
+$font-size-h5-md: $font-size-h3-md !default;
+$font-size-h6-md: $font-size-h3-md !default;
+
+$line-height-h1: 1.3 !default;
+$line-height-h2: 1.33 !default;
+$line-height-h3: 1.4 !default;
+$line-height-h4: 1.5 !default;
+$line-height-h5: $line-height-h4 !default;
+$line-height-h6: $line-height-h4 !default;
+
+$line-height-h1-md: 1.31 !default;
+$line-height-h2-md: 1.4 !default;
+$line-height-h3-md: 1.5 !default;
+$line-height-h4-md: $line-height-h3-md !default;
+$line-height-h5-md: $line-height-h4-md !default;
+$line-height-h6-md: $line-height-h4-md !default;
+
+$typography-margin-top: 0px !default;
+$typography-margin-bottom: 0px !default;
+
+$headings-font-family: $font-family-base !default;
+$headings-font-weight: $font-weight-bold !default;

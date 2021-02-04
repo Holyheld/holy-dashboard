@@ -1,0 +1,29 @@
+mixin modal-deposit-tokens({ title, description, buttons })
+	.modal.modal-deposit-tokens.js-modal-deposit-tokens(id='modal-deposit-tokens' aria-hidden='true' style='display: none;')
+		.modal__shield(data-micromodal-close)
+			.modal__dialog.js-modal-dialog(role='dialog' aria-modal='true' aria-labelledby='modal-deposit-tokens-title')
+				header.modal__header
+					h2.h3.modal__title(id='modal-deposit-tokens-title')=title
+				.modal__content(id='modal-deposit-tokens-content')
+					.modal__body
+						p.modal-deposit-tokens__description
+							span.js-number(data-code="tokenBalance" data-decimal-places="4")='0.0000'
+							span=` ${description}`
+						+input-text({
+							className: 'modal-deposit-tokens__input js-deposit-tokens-input',
+							type: 'text',
+							name: 'input_tokens',
+							value: '0.0000',
+							autocomplete: 'off',
+							maxButton: true,
+						})
+					.modal__footer
+						+button({
+							className: 'modal__footer-button js-modal-deposit-tokens-cancel',
+							text: buttons[0]
+						})
+						+button({
+							className: 'modal__footer-button js-stake',
+							mod: 'dark',
+							text: buttons[1]
+						})

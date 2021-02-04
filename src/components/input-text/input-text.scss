@@ -1,0 +1,67 @@
+.input-text {
+	position: relative;
+
+	&__input {
+		display: block;
+		height: 50px;
+		width: 100%;
+		padding: 13px 24px;
+		border: none;
+		border-radius: 12px;
+		background-color: $color-gray-light;
+		box-shadow: none;
+		color: $color-black;
+		font-family: inherit;
+		font-size: $font-size-base;
+		line-height: 24px;
+		font-weight: $font-weight-bold;
+		-webkit-appearance: none;
+
+		@include media-breakpoint-down(sm) {
+			padding: 13px 16px;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&::-ms-clear,
+		&::-ms-reveal {
+			display: none;
+		}
+
+		.input-text_with-max-button & {
+			padding: 13px 114px 13px 24px;
+
+			@include media-breakpoint-down(sm) {
+				padding: 13px 96px 13px 16px;
+			}
+		}
+	}
+
+	&__max-button {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 9px;
+		right: 24px;
+		height: 32px;
+		margin: 0;
+		padding: 0 16px;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: $font-weight-bold;
+		text-transform: uppercase;
+		border: none;
+		background: $color-blue;
+		color: $color-white;
+		box-shadow: 0 0 18px 0 $color-blue;
+		cursor: pointer;
+		border-radius: 16px;
+		-webkit-appearance: none;
+
+		@include media-breakpoint-down(sm) {
+			right: 16px;
+		}
+	}
+}

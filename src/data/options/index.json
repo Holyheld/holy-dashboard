@@ -1,0 +1,77 @@
+{
+	"needToConnect": {
+		"title": "Staking",
+		"emoji": "🙍‍♂️",
+		"subtitle": "You need to connect your wallet first",
+		"description": "To be able to view pool ROI and stake your tokens, you need to connect your wallet first. No wallet connection, no farming.",
+		"button": "Connect wallet"
+	},
+	"needToApprove": {
+		"title": "Staking",
+		"emoji": "💁‍♂️",
+		"subtitle": "You need to approve your tokens first",
+		"description": "Once you approve, you will be able to stake your tokens to start earning HOLY. You can unstake and collect your rewards at any time without any penalties.",
+		"button": "Approve"
+	},
+	"forecasts": {
+		"title": "Pool ROI",
+		"items": [
+			{
+				"emoji": "⏱️",
+				"name": "Daily",
+				"nameNumberPostfix": "%",
+				"prefix": "$",
+				"nameCode": "daily-percent",
+				"valueCode": "daily-value"
+			},
+			{
+				"emoji": "⏰",
+				"name": "Weekly",
+				"nameNumberPostfix": "%",
+				"prefix": "$",
+				"nameCode": "weekly-percent",
+				"valueCode": "weekly-value"
+			},
+			{
+				"emoji": "🕰️",
+				"name": "Annualy",
+				"nameNumberPostfix": "%",
+				"prefix": "$",
+				"nameCode": "annualy-percent",
+				"valueCode": "annualy-value"
+			}
+		]
+	},
+	"staking": {
+		"title": "Staking",
+		"description": [
+			"You currently staking",
+			"tokens, and earning HOLY rewards."
+		],
+		"buttons": [
+			"Harvest and unstake",
+			"Official pool link",
+			"Deposit tokens"
+		]
+	},
+	"earned": {
+		"title": "Earned HOLY",
+		"description": [
+			"You have earned",
+			"HOLY tokens and can now harvest your yield."
+		],
+		"buttons": [
+			["Harvest", "HOLY"]
+		]
+	},
+	"modalDepositTokens": {
+		"title": [
+			"Your available",
+			"Balance:"
+		],
+		"buttons": [
+			"Cancel",
+			"Stake tokens"
+		]
+	}
+}

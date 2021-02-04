@@ -1,0 +1,21 @@
+mixin modal-migrate-tokens({ title, description, buttons })
+	.modal.modal-migrate-tokens.js-modal-migrate-tokens(id='modal-migrate-tokens' aria-hidden='true' style='display: none;')
+		.modal__shield(data-micromodal-close)
+			.modal__dialog.js-modal-dialog(role='dialog' aria-modal='true' aria-labelledby='modal-migrate-tokens-title')
+				header.modal__header
+					h2.h3.modal__title(id='modal-migrate-tokens-title')=title
+				.modal__content(id='modal-migrate-tokens-content')
+					.modal__body
+						p.modal-migrate-tokens__description
+							span.js-number.animated(data-code="holyBalance" data-decimal-places="4")='0.0000'
+							span=` ${description}`
+					.modal__footer
+						+button({
+							className: 'modal__footer-button js-modal-migrate-tokens-cancel',
+							text: buttons[0]
+						})
+						+button({
+							className: 'modal__footer-button js-migrate',
+							mod: 'dark',
+							text: buttons[1]
+						})

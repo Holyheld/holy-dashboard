@@ -1,0 +1,23 @@
+@import '~normalize.css/normalize';
+
+@import 'variables/grid';
+@import 'variables/colors';
+@import 'variables/typography';
+
+@import 'mixins/media';
+@import 'mixins/grid';
+@import 'mixins/blur';
+
+@import 'core/grid';
+@import 'core/fonts';
+@import 'core/base';
+@import 'core/typography';
+@import 'core/helpers';
+
+@import '../components/index';
+
+#wallet-info {
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+}

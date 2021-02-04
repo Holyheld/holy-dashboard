@@ -1,0 +1,52 @@
+.option-intro {
+	position: relative;
+	padding-top: 0;
+
+	+ .emoji-items {
+		@include media-breakpoint-up(lg) {
+			padding-top: 0;
+		}
+	}
+
+	&__back-link {
+		position: absolute;
+		left: -80px;
+		top: 7px;
+
+		@include media-breakpoint-down(lg) {
+			top: 11px;
+			left: 0;
+		}
+
+		@include media-breakpoint-down(md) {
+			top: 1px;
+		}
+	}
+
+	&__title {
+		margin: 0 0 16px;
+
+		@include media-breakpoint-down(lg) {
+			padding: 0 0 0 64px;
+		}
+	}
+
+	&__description {
+		margin: 0 0 40px;
+		color: $color-gray;
+	}
+
+	&__logos {
+		display: flex;
+	}
+
+	&__picture {
+		margin: 0 -16px 0 0;
+	}
+
+	&__image {
+		display: block;
+		width: 80px;
+		height: 80px;
+	}
+}

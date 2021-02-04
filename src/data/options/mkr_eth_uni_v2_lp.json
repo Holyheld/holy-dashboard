@@ -1,0 +1,13 @@
+{
+	"head": {
+		"title": "Farm HOLY - Stake MKR-ETH UNI-V2 LP tokens",
+		"description": "HOLY - Earn HOLY tokens by staking HOLY-ETH LP, yCRV or other DeFi Uniswap V2 LP Tokens."
+	},
+	"body": {
+		"order": 9,
+		"name": "MKR-ETH UNI-V2 LP",
+		"title": "Stake MKR-ETH UNI-V2 LP",
+		"description": "Deposit your UNI-V2 LP tokens to earn HOLY.",
+		"officialPoolLink": "https://uniswap.info/pair/0xc2adda861f89bbb333c90c492cb837741916a225"
+	}
+}

@@ -1,0 +1,30 @@
+mixin button({ className, mod, size, icon, text, type, href, target, title, rel, ariaLabel, disabled })
+	- if (href) 
+		a.button.js-focus-visible(
+			class=`${className ? className : ''} ${size ? `button_${size}` : 'button_lg'} ${mod ? `button_${mod}` : ''}`
+			href=href
+			target=target
+			rel=rel
+			title=title
+			aria-label=ariaLabel
+		)
+			- if (icon) 
+				+icon({
+					className: 'button__icon',
+					id: icon,
+				})
+			span.button__text=text
+	- else
+		button.button.js-focus-visible(
+			class=`${className ? className : ''} ${size ? `button_${size}` : 'button_lg'} ${mod ? `button_${mod}` : ''}`
+			disabled=disabled
+			type=`${type || 'button'}`
+			title=title
+			aria-label=ariaLabel
+		)
+			- if (icon) 
+				+icon({
+					className: 'button__icon',
+					id: icon,
+				})
+			span.button__text=text

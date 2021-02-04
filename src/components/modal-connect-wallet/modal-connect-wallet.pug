@@ -1,0 +1,24 @@
+mixin modal-connect-wallet({ title, items, button })
+	.modal.modal-connect-wallet.js-modal-connect-wallet(id='modal-connect-wallet' aria-hidden='true' style='display: none;')
+		.modal__shield(data-micromodal-close)
+			.modal__dialog.js-modal-dialog(role='dialog' aria-modal='true' aria-labelledby='modal-connect-wallet-title')
+				header.modal__header
+					h2.h3.modal__title(id='modal-connect-wallet-title')=title
+				.modal__content(id='modal-connect-wallet-content')
+					.modal__body
+						ul.modal-connect-wallet__list
+							each item in items
+								li.modal-connect-wallet__item
+									picture.modal-connect-wallet__picture
+										img.modal-connect-wallet__image(src=item.image alt="")
+									h3.modal-connect-wallet__title
+										span=item.name
+									+button({
+										className: `modal-connect-wallet__connect-button js-modal-connect-wallet-${item.id}`,
+										text: item.button
+									})
+					.modal__footer
+						+button({
+							className: 'modal__footer-button js-modal-connect-wallet-cancel',
+							text: button
+						})

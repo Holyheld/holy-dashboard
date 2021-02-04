@@ -1,0 +1,15 @@
+{
+	"head": {
+		"title": "Farm HOLY - Stake yCRV tokens",
+		"description": "HOLY - Earn HOLY tokens by staking HOLY-ETH LP, yCRV or other DeFi Uniswap V2 LP Tokens."
+	},
+	"body": {
+		"order": 1,
+		"name": "yCRV",
+		"title": "Stake yCRV",
+		"description": "Deposit your yCRV tokens to earn HOLY.",
+		"detailedDescription": "Deposit your yCRV tokens to earn HOLY. 🌟 Please note, that HolyKnight stakes yCRV into yCurve vault by Yearn Finance to accrue yield. yCurve Vault has a withdrawal fee of 0.5%, that can be applied in some cases. This is Yearn Finance fee, and is not controlled or taken by HolyKnight. More information can be found <a class=\"link link_blue\" href=\"https://feel-the-yearn.app/vaults\" target=\"_blank\" rel=\"noreferrer noopener\">here</a>.",
+		"officialPoolLink": "https://uniswap.info/token/0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8",
+		"shadow": "#C4C9D8"
+	}
+}

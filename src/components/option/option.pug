@@ -1,0 +1,21 @@
+mixin option({ data })
+	.option.js-option(
+		data-id=htmlWebpackPlugin.options.data.pageName
+		data-name=htmlWebpackPlugin.options.data.body.name
+		data-official-pool-link=htmlWebpackPlugin.options.data.body.officialPoolLink
+	)
+		+option-intro({
+			title: data.body.title,
+			description: data.body.description,
+			detailedDescription: data.body.detailedDescription,
+			pageName: data.pageName
+		})
+		#need-to-connect
+		#forecasts
+		#need-to-approve
+		#current-state
+		+modal-deposit-tokens({
+			title: `${data.modalDepositTokens.title[0]} ${data.body.name} ${data.modalDepositTokens.title[1]}`,
+			description: data.body.name,
+			buttons: data.modalDepositTokens.buttons
+		})

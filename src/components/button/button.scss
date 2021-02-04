@@ -1,0 +1,77 @@
+.button {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	margin: 0;
+	font-size: $font-size-md;
+	line-height: 1;
+	font-family: $font-family-base;
+	text-decoration: none;
+	color: $color-black;
+	background: $color-gray-light;
+	border: none;
+	border-radius: 25px;
+	box-shadow: none;
+	cursor: pointer;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+	-webkit-appearance: none;
+	user-select: none;
+
+	&:hover {
+		transform: scale(1.05);
+
+		@media (hover: none) {
+			transform: none;
+		}
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+		transform: none !important;
+	}
+
+	&_dark {
+		background: $color-black;
+		color: $color-white;
+	}
+
+	&_transparent {
+		border: 1px solid $color-black;
+		background: transparent;
+		color: $color-black;
+	}
+
+	&_blue {
+		background: $color-blue;
+		color: $color-white;
+	}
+
+	&_lg {
+		height: 50px;
+		padding: 0 24px;
+		font-weight: $font-weight-bold;
+	}
+
+	&_sm {
+		height: 40px;
+		padding: 0 16px;
+		font-weight: $font-weight-regular;
+	}
+
+	&__icon {
+		width: 10px;
+		min-width: 10px;
+		height: 10px;
+		min-height: 10px;
+		margin: 1px 0 0;
+		fill: currentColor;
+
+		+ .button__text {
+			max-width: calc(100% - 18px);
+			margin: 0 0 0 8px;
+		}
+	}
+}

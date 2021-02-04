@@ -1,0 +1,35 @@
+mixin option-card({ disabled, label, title, description, shadow, pageName })
+	article.option-card(style=`box-shadow: 0 0 18px 0 ${shadow};`)
+		picture.option-card__picture
+			source(
+				type='image/webp'
+				srcset=`/assets/images/${pageName}@2x.webp`
+			)
+			img.option-card__image(
+				src=`/assets/images/${pageName}@2x.png`
+				srcset=`/assets/images/${pageName}@2x.png`
+				alt=""
+			)
+		h3.h2.option-card__title=title
+		p.option-card__description=description
+		//- span.option-card__apy
+		//- 	span='APY '
+		//- 	span.js-number(data-code="apy" data-name=pageName data-decimal-places="2")='0.00'
+		//- 	span='%'
+		+button({
+			className: 'option-card__button js-router-link',
+			text: disabled ? 'Not available yet' : 'Select',
+			href: disabled ? null : `/${pageName}/`,
+			disabled,
+		})
+		- if (label)
+			picture.option-card__label-picture
+				source(
+					type='image/webp'
+					srcset=`/assets/images/label-${label}@2x.webp`
+				)
+				img.option-card__label-image(
+					src=`/assets/images/label-${label}@2x.png`
+					srcset=`/assets/images/label-${label}@2x.png`
+					alt=""
+				)

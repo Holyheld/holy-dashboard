@@ -1,0 +1,12 @@
+mixin input-text({ className, type, name, value, autocomplete, maxButton })
+	.input-text.js-input-text(class=`${className} ${maxButton ? 'input-text_with-max-button' : ''}`)
+		input.input-text__input.js-input-text-input(
+			type=type
+			name=name
+			value=value
+			autocomplete=autocomplete
+		)
+		- if (maxButton)
+			button.input-text__max-button.js-input-text-max-button.js-focus-visible(
+				type="button"
+			)='Max'

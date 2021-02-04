@@ -1,0 +1,105 @@
+{
+	"head": {
+		"title": "Farm HOLY - Liquidity Mining program",
+		"description": "HOLY - Earn HOLY tokens by staking HOLY-ETH LP, yCRV or other DeFi Uniswap V2 LP Tokens."
+	},
+	"body": {
+		"intro": {
+			"title": "Farming HOLY",
+			"description": [
+				"Welcome to an experimental active waitlist! Early adopters can get free membership rewards in HOLY while staking other DeFi LP tokens or by providing liquidity in yCRV or HOLY-ETH pool.",
+				"HOLY has no monetary value and is worthless. Please do not consider it as an investment opportunity. HOLY is a membership reward that will allow for early access to the application. It focuses on creating strong HOLY liquidity, kickstarting the Yield Treasury, and supporting the waitlist for early believers in the project, and those who are excited about our project."
+			]
+		},
+		"migration": {
+			"title": "HOLY to HH migration",
+			"text": [
+				"You need to migrate a total of",
+				"HOLY to access your full bonus of",
+				"HOLY post migration. Migration is a one-time irreversible event. You will receive 1 HH per every 1 HOLY to your wallet. More information about migration can be found <a class=\"link link_blue\" href=\"https://medium.com/holyheld/next-steps-7aebb6ddeba\" target=\"_blank\" rel=\"noreferrer noopener\">here</a>."
+			],
+			"buttonApprove": "Approve tokens",
+			"buttonMigrate": "Migrate tokens"
+		},
+		"walletInfo": {
+			"title": "Your pool staking history",
+			"totalEarnedHolyTitle": "Total earned HOLY",
+			"pendingBonusHolyTitle": "Pending bonus HOLY",
+			"pendingBalanceTitle": "Pending",
+			"pendingHolyTitle": "Pending HOLY",
+			"tableColumns": [
+				"Date",
+				"Type",
+				"Amount",
+				"Rewards",
+				"Bonus",
+				"Transaction"
+			]
+		},
+		"numbers": {
+			"title": "Current situation",
+			"items": [
+				{
+					"isHidden": true,
+					"emoji": "💰",
+					"name": "HOLY Price (USD)",
+					"prefix": "$",
+					"valueCode": "holyPrice"
+				},
+				{
+					"isHidden": true,
+					"emoji": "🏦",
+					"name": "TVL (USD)",
+					"prefix": "$",
+					"valueCode": "totalValueLocked"
+				},
+				{
+					"emoji": "⏰",
+					"name": "End of Program",
+					"prefix": "",
+					"valueText": "19 January, 2021"
+				},
+				{
+					"emoji": "🙏",
+					"name": "Circulating Supply",
+					"fourDecimalPlaces": true,
+					"prefix": "",
+					"valueCode": "circulatingSupply"
+				},
+				{
+					"isHidden": true,
+					"emoji": "🖨",
+					"name": "HOLY per Block",
+					"fourDecimalPlaces": true,
+					"prefix": "",
+					"valueCode": "holyPerBlock"
+				},
+				{
+					"emoji": "📁",
+					"name": "Remaining Supply",
+					"fourDecimalPlaces": true,
+					"prefix": "",
+					"valueCode": "remainingSupply"
+				}
+			]
+		},
+		"options": {
+			"premium": {
+				"title": "Pools with the highest rewards rates",
+				"description": "You can pick one or many, or even all options to farm as many HOLY as possible."
+			},
+			"other": {
+				"title": "DeFi LP staking options",
+				"description": "You can pick one or many, or even all options to farm as many HOLY as possible."
+			}
+		},
+		"modalMigrateTokens": {
+			"title": "Your available HOLY Balance:",
+			"tokenName": "HOLY",
+			"buttons": [
+				"Cancel",
+				"Migrate tokens"
+			]
+		}
+	}
+}

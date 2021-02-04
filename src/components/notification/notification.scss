@@ -1,0 +1,58 @@
+.notification {
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	&__title {
+		margin: 0 0 40px;
+
+		@include media-breakpoint-down(md) {
+			margin: 0 0 24px;
+		}
+	}
+
+	&__body {
+		padding: 40px;
+		background: $color-white;
+		border-radius: 16px;
+		box-shadow: 0 9px 18px 0 rgba($color-black-clear, 0.1);
+
+		@include media-breakpoint-down(md) {
+			padding: 24px;
+		}
+	}
+	
+	&__emoji {
+		float: right;
+		padding: 0 0 4px 14px;
+		font-size: 80px;
+		line-height: 105px;
+	}
+	
+	&__subtitle {
+		margin: 0 0 20px;
+
+		@include media-breakpoint-down(md) {
+			margin: 0 0 16px;
+		}
+	}
+	
+	&__description {
+		margin: 0 0 40px;
+		color: $color-gray;
+
+		@include media-breakpoint-down(md) {
+			font-size: $font-size-sm;
+			line-height: $line-height-xl;
+		}
+	}
+
+	&__button {
+		min-width: 190px;
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			min-width: 0;
+		}
+	}
+}

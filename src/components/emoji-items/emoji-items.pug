@@ -1,0 +1,24 @@
+mixin emoji-items({ title, items })
+	section.section.emoji-items
+		h2.emoji-items__title=title
+		ul.emoji-items__list
+			each item in items.filter(item => !item.isHidden)
+				li.emoji-items__item
+					span.emoji-items__emoji=item.emoji
+					dl.emoji-items__info
+						dt.emoji-items__name
+							span=item.name
+							- if (item.nameNumberPostfix)
+								span=' - '
+								span.js-number(data-code=`${item.nameCode}`)='0.00'
+								span=item.nameNumberPostfix
+						dd.emoji-items__value
+							- if (item.valueText)
+								span=item.valueText
+							- else
+								span=item.prefix
+								span.js-number.animated(
+									data-code=`${item.valueCode}`
+									data-decimal-places=`${item.fourDecimalPlaces ? '4' : '2'}`
+								)=`${item.fourDecimalPlaces ? '0.0000' : '0.00'}`
+

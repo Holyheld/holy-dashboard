@@ -1,0 +1,15 @@
+.intro {
+	padding-top: 0;
+
+	&__title {
+		margin: 0 0 16px;
+	}
+
+	&__description {
+		color: $color-gray;
+
+		&:not(:last-child) {
+			margin: 0 0 16px;
+		}
+	}
+}

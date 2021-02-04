@@ -1,0 +1,41 @@
+mixin option-simple({ disabled, title, description, pageName })
+	article.option-simple
+		.option-simple__col
+			picture.option-simple__picture
+				source(
+					type='image/webp'
+					media="(max-width: 1023px)"
+					srcset=`/assets/images/${pageName}-xs@2x.webp`
+				)
+				source(
+					media="(max-width: 1023px)"
+					srcset=`/assets/images/${pageName}-xs@2x.png`
+				)
+				source(
+					type='image/webp'
+					srcset=`/assets/images/${pageName}-sm@2x.webp`
+				)
+				img.option-simple__image(
+					src=`/assets/images/${pageName}@2x.png`
+					srcset=`/assets/images/${pageName}-sm@2x.png`
+					alt=""
+				)
+		.option-simple__col
+			dl.option-simple__info
+				dt.option-simple__name=title
+				dd.option-simple__value=description
+		.option-simple__col
+			//- dl.option-simple__info
+			//- 	dt.option-simple__name='APY'
+			//- 	dd.option-simple__value
+			//- 		span.js-number(data-code="apy" data-name=pageName data-decimal-places="2")='0.00'
+			//- 		span='%'
+		.option-simple__col
+			+button({
+				className: 'option-simple__button js-router-link',
+				text: disabled ? 'Not available yet' : 'Select',
+				href: disabled ? null : `/${pageName}/`,
+				disabled,
+			})
+					
+

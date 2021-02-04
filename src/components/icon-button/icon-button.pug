@@ -1,0 +1,10 @@
+mixin icon-button({ className, icon, title })
+	button.icon-button.js-focus-visible(
+		class=`${className ? className : ''}`
+		type="button"
+		title=title
+	)
+		+icon({
+			className: `icon-button__icon ${icon}`,
+			id: icon,
+		})

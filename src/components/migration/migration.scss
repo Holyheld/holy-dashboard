@@ -1,0 +1,28 @@
+.migration {
+	&__title {
+		margin: 0 0 16px;
+	}
+
+	&__text {
+		margin: 0 0 40px;
+		color: $color-gray;
+
+		@include media-breakpoint-down(md) {
+			margin: 0 0 24px;
+		}
+	}
+
+	&__button {
+		&_approve {
+			.migration.is-approved & {
+				display: none;
+			}
+		}
+
+		&_open-modal {
+			.migration:not(.is-approved) & {
+				display: none;
+			}
+		}
+	}
+}
