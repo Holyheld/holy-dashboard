@@ -9,7 +9,7 @@ Requires [Node.js](https://nodejs.org/en/) to work. The project can be compiled 
 
 ## Stack
 
-- JavaScript (ES6 +)
+- JavaScript (ES6+)
 - [Pug](https://pugjs.org/api/getting-started.html)
 - [Sass](https://sass-lang.com/)
 
